@@ -48,4 +48,5 @@ colnames(setWithActivityNames)<-gsub("BodyBody", "Body", colnames(setWithActivit
 
 tidySet <- aggregate(. ~activity + subjectID, setWithActivityNames, mean)
 tidySet <- tidySet[order(tidySet$activity, tidySet$subjectID), ]
-write.table(tidySet, "tidySet.txt", row.names = FALSE) ## final answer.
+write.table(tidySet, "tidySet.txt", row.names = FALSE) 
+View(tidySet)## final answer.
